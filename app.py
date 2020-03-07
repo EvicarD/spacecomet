@@ -12,7 +12,7 @@ def index():
     result = 0
     if request.method == 'POST':
         username = request.form['username']
-        result = int(username) * LIGHT_YEAR_SEC
+        result = f"{round(float(username) * LIGHT_YEAR_SEC,2):,}"
     return render_template('index.html', name='home', result=result)
 
 

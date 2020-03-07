@@ -1,7 +1,18 @@
 .background {
-    background-color: black;
+  background-color: black;
 }
 
 .bg-color {
-    background-color: #bf9b30;
+  background-color: #bf9b30;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://miro.medium.com/max/416/1*SMHP1p13yfUSAZrEYBRakA.png");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

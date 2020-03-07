@@ -1,77 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
     <title>Space Comet</title>
-</head>
+  </head>
 
-<body class="background">
+  <body>
     <section>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #bf9b30;">
-            <a class="navbar-brand" href="#">SPACE<img src="/static/comet.png" alt="" style="width: 50px;">COMET</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: #bf9b30;"
+      >
+        <a class="navbar-brand" href="#"
+          >SPACE<img
+            src="/static/comet.png"
+            alt=""
+            style="width: 50px;"
+          />COMET</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('index') }}"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('facts') }}">Ton 618</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('ogle') }}">Ogle-tr-122b</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ url_for('index') }}">Home <span
-                                class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('facts') }}">Ton 618</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('ogle') }}">Ogle-tr-122b</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
-    </section>
-    <div class="container-fluid mx-auto text-center">
-        <h1 class="text-white py-5 display-3 font-weight-bold">Welcome To Space Comet education website</h1>
-        <div class="row p-0">
-            <div class="col p-0">
-                <h1 class="text-white px-5">UY scuti is the biggest star in the universe.
-                    You won't imagine how big it is!but a hundred years later,it will become a supernova.but then,who
-                    cares? It is just a star.
-                </h1>
-                <img src="https://miro.medium.com/max/416/1*SMHP1p13yfUSAZrEYBRakA.png" alt="" style="width: 100%;">
-                <form method="post" action="/#result">
-                    <input type=text name=username>
-                    <input type=submit value=Calculate>
-                </form>
-                <section id="result"></section>
-                <h1 class="text-white">{{ result }} KM</h1>
-            </div>
+          </form>
         </div>
-    </div>
-
+      </nav>
+    </section>
+    <section class="main col-8 mx-auto">
+      <div class="container-fluid text-center">
+        <h5 class="text-white py-5 display-3 font-weight-bold">
+          Welcome To Space Comet education website
+        </h5>
+        <div class="row p-0">
+          <div class="col p-0">
+            <h3 class="text-white px-5 mb-5">
+              UY scuti is the biggest star in the universe. You won't imagine
+              how big it is!but a hundred years later,it will become a
+              supernova.but then,who cares? It is just a star.
+            </h3>
+            <h5 class="text-white text-uppercase">speed light by seconds</h5>
+            <form method="post" action="/#result" class="form-inline">
+              <div class="col">
+                <input
+                  class="form-control"
+                  type="number"
+                  name="username"
+                  step="any"
+                  min="0"
+                  oninvalid="this.setCustomValidity('enter positive value')"
+                />
+                <button class="btn btn-warning" type="submit">Calculate</button>
+              </div>
+            </form>
+            <section id="result" class="mb-5">
+              <h1 class="text-white">
+                {% if result %} {{ result }} KM {% endif %}
+              </h1>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
