@@ -6,7 +6,7 @@
   background-color: #bf9b30;
 }
 
-body {
+.bg-image {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://miro.medium.com/max/416/1*SMHP1p13yfUSAZrEYBRakA.png");
   /* Full height */
