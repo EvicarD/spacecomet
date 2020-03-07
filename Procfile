@@ -1,1 +1,1 @@
-web: gunicorn app:spacecomet
+web: gunicorn app:app
