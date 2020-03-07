@@ -16,3 +16,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.cover-90 {
+  min-height: 90vh;
+}
+
+.cover-10 {
+  min-height: 10vh;
+  background-color: #bf9b30;
+}
